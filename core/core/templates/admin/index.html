@@ -1,0 +1,72 @@
+{% extends "admin/index.html" %}
+{% load humanize %}
+
+{% block content %}
+
+{{ block.super }}
+
+<hr>
+<h2>Today's Visitors</h2>
+
+<table border="1" style="width:100%; border-collapse: collapse;">
+    <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Purpose</th>
+        <th>Check-in</th>
+        <th>Check-out</th>
+        <th>Status</th>
+        <th>Duration</th>
+    </tr>
+
+    {% for visitor in today_visitors_list %}
+    <tr>
+        <td>{{ visitor.full_name }}</td>
+        <td>{{ visitor.department.name }}</td>
+        <td>{{ visitor.purpose.name }}</td>
+        <td>{{ visitor.check_in_time }}</td>
+        <td>{{ visitor.check_out_time|default:"--" }}</td>
+        <td>
+            {% if visitor.checked_out %}
+                Checked Out
+            {% else %}
+                In Building
+            {% endif %}
+        </td>
+        <td>{{ visitor.duration_inside }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="7">No visitors today.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<hr>
+<h2>Current Visitors (Still Inside)</h2>
+
+<table border="1" style="width:100%; border-collapse: collapse;">
+    <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Purpose</th>
+        <th>Check-in</th>
+        <th>Duration</th>
+    </tr>
+
+    {% for visitor in current_visitors_list %}
+    <tr>
+        <td>{{ visitor.full_name }}</td>
+        <td>{{ visitor.department.name }}</td>
+        <td>{{ visitor.purpose.name }}</td>
+        <td>{{ visitor.check_in_time }}</td>
+        <td>{{ visitor.duration_inside }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="5">No visitors currently inside.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

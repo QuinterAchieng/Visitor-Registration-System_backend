@@ -1,0 +1,10 @@
+ venv
+backup.json
+__pycache__/
+*.pyc
+*.log
+*.DS_Store
+!core/
+!core/**/*.py
+!core/**/*.tcl
+!core/**/*.dll
