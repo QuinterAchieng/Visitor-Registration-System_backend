@@ -1,7 +1,7 @@
 # Django Backend Project
 
 ##  Overview
-This is a backend system built using Python and Django.  
+This is a  system where I was responsible for building the backend API using Python and Django.The frontend was developed by a team member.  
 It provides RESTful API endpoints for managing application data and supports integration with a frontend application.
 
 The project demonstrates backend development skills including API design, database modeling, and authentication.
@@ -10,7 +10,7 @@ The project demonstrates backend development skills including API design, databa
 
 ##  Features
 - REST API built with Django / Django REST Framework
-- User authentication (login & registration)
+- User authentication :login & registration
 - CRUD operations: Create, Read, Update, Delete
 - Database integration
 - Secure backend architecture
@@ -18,10 +18,11 @@ The project demonstrates backend development skills including API design, databa
 ---
 
 ##  Technologies Used
-- Python 3
+- Python 
 - Django
-- Django REST Framework (if used)
+- Django REST Framework 
 - SQLite3
+- REST APIs
 - Git & GitHub
 
 ---
@@ -63,6 +64,21 @@ python manage.py migrate
 
 ## Start server
 python manage.py runserver
+
+## My Contributions
+
+Built RESTful API using Django / Django REST Framework
+Designed and implemented database models
+Handled user authentication (login/register)
+Created endpoints for products/orders/users
+Connected backend to frontend via API
+Managed database migrations
+
+## My Impact
+
+Reduced API response time by optimizing queries
+Built secure authentication system
+Ensured smooth integration with frontend team
 
 ##  What I Learned
 
