@@ -1,7 +1,7 @@
 # Django Backend Project
 
 ##  Overview
-This is a  system where I was responsible for building the backend API using Python and Django.The frontend was developed by a team member.  
+This is a web application/system for visitor registration and management where I was responsible for building the backend  using Python and Django.The frontend was developed by a team member.  
 It provides RESTful API endpoints for managing application data and supports integration with a frontend application.
 
 The project demonstrates backend development skills including API design, database modeling, and authentication.
