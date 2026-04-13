@@ -69,8 +69,8 @@ python manage.py runserver
 
 Built RESTful API using Django / Django REST Framework
 Designed and implemented database models
-Handled user authentication (login/register)
-Created endpoints for products/orders/users
+Handled user authentication: login $ register
+Created endpoints for users
 Connected backend to frontend via API
 Managed database migrations
 
